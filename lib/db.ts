@@ -63,7 +63,7 @@ export async function connectDB(): Promise<typeof mongoose> {
                 console.log('✅ MongoDB connected successfully');
                 return mongoose;
             });
-        })();
+        })() as Promise<typeof mongoose>;
     }
 
     try {
