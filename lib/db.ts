@@ -34,7 +34,7 @@ export async function connectDB(): Promise<typeof mongoose> {
             bufferCommands: false,
         };
 
-        cached.promise = (async () => {
+        cached.promise = (async (): Promise<typeof mongoose> => {
             let uri = MONGODB_URI;
 
             if (!uri) {
