@@ -75,7 +75,7 @@ npm run seed
 ```bash
 npm run dev
 ```
-Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
+Visit [http://localhost:3000](http://localhost:3000) (or the port shown in your terminal, e.g., http://localhost:3001) to see the app in action.
 
 ## 🔑 Demo Credentials
 
