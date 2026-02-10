@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Html5QrcodeScanner, Html5Qrcode } from 'html5-qrcode';
 import { Camera, X, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
@@ -12,33 +11,38 @@ interface QRScannerProps {
 }
 
 export function QRScanner({ onScanSuccess, onScanFailure, onClose }: QRScannerProps) {
-    const scannerRef = useRef<Html5Qrcode | null>(null);
+    const scannerRef = useRef<any>(null);
     const [isScannerInitialised, setIsScannerInitialised] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        // Create an instance of the scanner
-        const scanner = new Html5Qrcode('qr-reader');
-        scannerRef.current = scanner;
+        // Dynamically import html5-qrcode to avoid SSR issues
+        let html5QrCode: any;
 
         const startScanner = async () => {
             try {
+                const { Html5Qrcode } = await import('html5-qrcode');
+
+                // Create an instance of the scanner
+                html5QrCode = new Html5Qrcode('qr-reader');
+                scannerRef.current = html5QrCode;
+
                 const config = {
                     fps: 10,
                     qrbox: { width: 250, height: 250 },
                     aspectRatio: 1.0
                 };
 
-                await scanner.start(
+                await html5QrCode.start(
                     { facingMode: 'environment' },
                     config,
-                    (decodedText) => {
+                    (decodedText: string) => {
                         // Success callback
                         onScanSuccess(decodedText);
                         // Stop scanner after success to prevent multiple scans
                         stopScanner();
                     },
-                    (errorMessage) => {
+                    (errorMessage: string) => {
                         // Failure callback (often frequent during search, so we handle it silently unless passed)
                         if (onScanFailure) onScanFailure(errorMessage);
                     }
@@ -53,7 +57,10 @@ export function QRScanner({ onScanSuccess, onScanFailure, onClose }: QRScannerPr
         startScanner();
 
         return () => {
-            stopScanner();
+            // Cleanup function
+            if (html5QrCode && html5QrCode.isScanning) {
+                html5QrCode.stop().then(() => html5QrCode.clear()).catch(console.error);
+            }
         };
     }, []);
 

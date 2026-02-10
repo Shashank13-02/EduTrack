@@ -12,7 +12,9 @@
     "seed-knowledge": "tsx scripts/seed-knowledge.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@langchain/core": "^0.3.1",
+    "@langchain/google-genai": "^2.1.16",
     "@langchain/openai": "^0.3.1",
     "@langchain/pinecone": "^0.1.1",
     "@popmotion/easing": "^1.0.2",

@@ -22,7 +22,19 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { QRScanner } from '@/components/ui/QRScanner';
+// import dynamic from 'next/dynamic';
+
+// const QRScanner = dynamic(
+//     () => import('@/components/ui/QRScanner').then((mod) => mod.QRScanner),
+//     { ssr: false }
+// );
+import dynamic from 'next/dynamic';
+
+const QRScanner = dynamic(
+    () => import('@/components/ui/QRScanner').then((mod) => mod.QRScanner),
+    { ssr: false }
+);
+// const QRScanner = (props: any) => <div>Scanner Disabled for Build Test</div>;
 import { cn } from '@/lib/utils';
 import { calculateDistance } from '@/lib/geolocation';
 

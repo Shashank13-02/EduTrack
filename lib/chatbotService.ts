@@ -18,10 +18,10 @@ export function getEmbeddingsModel() {
         throw new Error('OPENAI_API_KEY or DEEPSEEK_API_KEY is required');
     }
 
-    // If using OpenRouter/DeepSeek, use text-embedding-3-small through OpenRouter
+    // If using OpenRouter/DeepSeek, use text-embedding-3-small through OpenRouter or fallback
     return new OpenAIEmbeddings({
         apiKey: OPENAI_API_KEY,
-        modelName: 'sentence-transformers/all-minilm-l6-v2',
+        modelName: 'sentence-transformers/all-minilm-l6-v2', // Or openai/text-embedding-3-small if available on OpenRouter
         configuration: {
             baseURL: OPENROUTER_BASE_URL,
         },

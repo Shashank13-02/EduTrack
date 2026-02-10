@@ -1,10 +1,11 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import { OpenAIEmbeddings } from '@langchain/openai';
+import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { PineconeStore } from '@langchain/pinecone';
 import { Document } from '@langchain/core/documents';
 import CollegeKnowledge from '../models/CollegeKnowledge';
 import { getPineconeIndex, ensureIndexExists } from '../lib/pinecone';
+import { TaskType } from "@google/generative-ai";
 
 dotenv.config();
 
@@ -319,7 +320,7 @@ async function seedKnowledge() {
 
         const embeddings = new OpenAIEmbeddings({
             apiKey,
-            modelName: 'openai/text-embedding-3-small',
+            modelName: 'sentence-transformers/all-minilm-l6-v2', // or openai/text-embedding-3-small
             configuration: {
                 baseURL: 'https://openrouter.ai/api/v1',
             },

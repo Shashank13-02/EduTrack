@@ -20,14 +20,14 @@ export default function TeacherLayout({
 
     if (!mounted) {
         return (
-            <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+            <div className="min-h-screen bg-background text-foreground">
                 {children}
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex transition-colors duration-500">
+        <div className="min-h-screen bg-background text-foreground flex transition-colors duration-500">
             <div className="fixed inset-0 pointer-events-none z-0">
                 <ParticleBackground />
             </div>

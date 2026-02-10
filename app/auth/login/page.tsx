@@ -35,16 +35,30 @@ function LoginContent() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
-            const data = await response.json();
+
+            // Safely parse response
+            const text = await response.text();
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch (err) {
+                console.error('Failed to parse response:', text);
+                setError(`Server Error: ${response.status} ${response.statusText}`);
+                setIsLoading(false);
+                return;
+            }
+
             if (!response.ok) {
                 setError(data.error || 'Login failed');
                 setIsLoading(false);
                 return;
             }
+
             // Redirect based on role
-            if (data.user.role === 'ADMIN') {
+            const role = data.user?.role?.toUpperCase();
+            if (role === 'ADMIN') {
                 router.push('/admin/pre-registration');
-            } else if (data.user.role === 'TEACHER') {
+            } else if (role === 'TEACHER') {
                 router.push('/teacher/dashboard');
             } else {
                 router.push('/student/dashboard');

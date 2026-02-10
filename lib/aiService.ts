@@ -1,52 +1,53 @@
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
-const API_KEY = process.env.DEEPSEEK_API_KEY;
+const API_KEY = process.env.DEEPSEEK_API_KEY || process.env.OPENAI_API_KEY;
 
 export interface AIServiceResponse {
-    content: string;
-    error?: string;
+  content: string;
+  error?: string;
 }
 
 export async function generateAIConsultation(prompt: string): Promise<AIServiceResponse> {
-    if (!API_KEY) return { content: "", error: "OPENROUTER_API_KEY not configured" };
+  if (!API_KEY) return { content: "", error: "API_KEY not configured" };
 
-    try {
-        const response = await fetch(OPENROUTER_API_URL, {
-            method: "POST",
-            headers: {
-                Authorization: `Bearer ${API_KEY}`,
-                "Content-Type": "application/json",
-                "HTTP-Referer": "http://localhost:3000",
-                "X-Title": "EduTrack AI",
-            },
-            body: JSON.stringify({
-                model: "tngtech/deepseek-r1t2-chimera:free",
-                messages: [
-                    {
-                        role: "system",
-                        content:
-                            "You are an expert academic and career mentor for college students. Provide structured, practical guidance. If asked for JSON, output JSON only.",
-                    },
-                    { role: "user", content: prompt },
-                ],
-                temperature: 0.4,
-                max_tokens: 2000,
-            }),
-        });
+  try {
+    const response = await fetch(OPENROUTER_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": "http://localhost:3000",
+        "X-Title": "EduTrack AI",
+      },
+      body: JSON.stringify({
+        model: "deepseek/deepseek-chat", // or "tngtech/deepseek-r1t2-chimera:free" if preferred
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are an expert academic and career mentor for college students. Provide structured, practical guidance. If asked for JSON, output JSON only.",
+          },
+          { role: "user", content: prompt },
+        ],
+        temperature: 0.4,
+        max_tokens: 2000,
+      }),
+    });
 
-        const data = await response.json();
+    const data = await response.json();
 
-        if (!response.ok) {
-            throw new Error(data?.error?.message || `API Error: ${response.status}`);
-        }
-
-        return { content: data.choices?.[0]?.message?.content || "" };
-    } catch (error: any) {
-        return { content: "", error: error.message || "Failed to connect to AI service" };
+    if (!response.ok) {
+      throw new Error(data?.error?.message || `API Error: ${response.status}`);
     }
+
+    return { content: data.choices?.[0]?.message?.content || "" };
+  } catch (error: any) {
+    console.error("AI Service Error:", error);
+    return { content: "", error: error.message || "Failed to connect to AI service" };
+  }
 }
 
 export async function generateLearningPath(studentData: any) {
-    const prompt = `
+  const prompt = `
         Based on the following student profile, generate a personalized 7-day learning routine.
         The routine should focus on developing their weak skills while maintaining their strong ones.
         Keep the tone encouraging and professional.
@@ -79,19 +80,19 @@ export async function generateLearningPath(studentData: any) {
         }
     `;
 
-    const result = await generateAIConsultation(prompt);
-    if (result.error) return { error: result.error };
+  const result = await generateAIConsultation(prompt);
+  if (result.error) return { error: result.error };
 
-    try {
-        const jsonMatch = result.content.match(/\{[\s\S]*\}/);
-        return JSON.parse(jsonMatch ? jsonMatch[0] : result.content);
-    } catch (e) {
-        return { error: 'Failed to parse AI response' };
-    }
+  try {
+    const jsonMatch = result.content.match(/\{[\s\S]*\}/);
+    return JSON.parse(jsonMatch ? jsonMatch[0] : result.content);
+  } catch (e) {
+    return { error: 'Failed to parse AI response' };
+  }
 }
 
 export async function generateCareerRoadmap(studentData: any) {
-    const prompt = `
+  const prompt = `
 You are an expert career mentor for college students.
 
 Create a personalized career roadmap based on the student profile below.
@@ -139,19 +140,19 @@ JSON format:
 }
 `;
 
-    const result = await generateAIConsultation(prompt);
-    if (result.error) return { error: result.error };
+  const result = await generateAIConsultation(prompt);
+  if (result.error) return { error: result.error };
 
-    try {
-        const jsonMatch = result.content.match(/\{[\s\S]*\}/);
-        return JSON.parse(jsonMatch ? jsonMatch[0] : result.content);
-    } catch (e) {
-        return { error: "Failed to parse AI response" };
-    }
+  try {
+    const jsonMatch = result.content.match(/\{[\s\S]*\}/);
+    return JSON.parse(jsonMatch ? jsonMatch[0] : result.content);
+  } catch (e) {
+    return { error: "Failed to parse AI response" };
+  }
 }
 
 export async function generatePerformanceFeedback(studentData: any, performanceData: any) {
-    const prompt = `
+  const prompt = `
 You are an empathetic academic mentor providing personalized feedback to a college student.
 
 Student Profile:
@@ -166,8 +167,8 @@ Performance Metrics:
 
 Weak Areas Identified:
 ${performanceData.weakAreas && performanceData.weakAreas.length > 0
-            ? performanceData.weakAreas.map((area: string, i: number) => `${i + 1}. ${area}`).join('\n')
-            : '- None identified yet'}
+      ? performanceData.weakAreas.map((area: string, i: number) => `${i + 1}. ${area}`).join('\n')
+      : '- None identified yet'}
 
 Task: Write a personalized, encouraging message (150-200 words) to this student as their teacher.
 Focus on:
@@ -180,14 +181,14 @@ Tone: Professional but warm, motivating, solution-focused.
 Output: Plain text message only, no JSON, no formatting.
 `;
 
-    const result = await generateAIConsultation(prompt);
-    if (result.error) return { error: result.error };
+  const result = await generateAIConsultation(prompt);
+  if (result.error) return { error: result.error };
 
-    return { content: result.content.trim() };
+  return { content: result.content.trim() };
 }
 
 export async function generateComprehensiveStudentReport(studentData: any, performanceData: any) {
-    const prompt = `
+  const prompt = `
 You are an expert education analyst. Generate a comprehensive performance report for a college student.
 
 Student Profile:
@@ -207,13 +208,13 @@ Performance Metrics:
 
 Subject Performance:
 ${performanceData.subjectScores && performanceData.subjectScores.length > 0
-            ? performanceData.subjectScores.map((s: any) => `- ${s.subject}: ${s.average}%`).join('\n')
-            : '- No subject data available'}
+      ? performanceData.subjectScores.map((s: any) => `- ${s.subject}: ${s.average}%`).join('\n')
+      : '- No subject data available'}
 
 Weak Areas:
 ${performanceData.weakAreas && performanceData.weakAreas.length > 0
-            ? performanceData.weakAreas.map((area: string, i: number) => `${i + 1}. ${area}`).join('\n')
-            : '- No significant weaknesses identified'}
+      ? performanceData.weakAreas.map((area: string, i: number) => `${i + 1}. ${area}`).join('\n')
+      : '- No significant weaknesses identified'}
 
 Task: Generate a detailed student performance report in JSON format with the following structure:
 
@@ -261,13 +262,13 @@ Task: Generate a detailed student performance report in JSON format with the fol
 Output ONLY valid JSON. Be specific, constructive, and encouraging.
 `;
 
-    const result = await generateAIConsultation(prompt);
-    if (result.error) return { error: result.error };
+  const result = await generateAIConsultation(prompt);
+  if (result.error) return { error: result.error };
 
-    try {
-        const jsonMatch = result.content.match(/\{[\s\S]*\}/);
-        return JSON.parse(jsonMatch ? jsonMatch[0] : result.content);
-    } catch (e) {
-        return { error: 'Failed to parse AI response' };
-    }
+  try {
+    const jsonMatch = result.content.match(/\{[\s\S]*\}/);
+    return JSON.parse(jsonMatch ? jsonMatch[0] : result.content);
+  } catch (e) {
+    return { error: 'Failed to parse AI response' };
+  }
 }

@@ -14,8 +14,10 @@ EduTrack is an advanced, AI-driven educational analytics platform designed to tr
 
 ### For Students
 - **Personalized Learning Path**: AI-generated 7-day study plans tailored to individual strengths and weaknesses.
+- **AI Chatbot Tutor**: 24/7 academic assistant powered by DeepSeek Coder (via OpenRouter) for instant doubt resolution.
 - **Skill Gap Analysis**: Radar charts and detailed breakdowns of core vs. non-core skills.
 - **Performance Tracking**: Monitor progress across quizzes, assignments, and exams.
+- **Dark/Light Mode**: Fully responsive theme with seamless transitions and persistent user preference.
 - **Review System**: Get instant feedback on where to improve.
 
 ## 🛠️ Tech Stack
@@ -51,9 +53,15 @@ The project comes with a default configuration that works out-of-the-box using a
 For production/persistence, create a `.env.local` file:
 
 ```env
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/edutrack
+MOGNODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/edutrack
 JWT_SECRET=your-secure-secret-key
 NEXT_PUBLIC_BASE_URL=https://your-domain.com
+
+# AI Configuration (DeepSeek / OpenRouter)
+DEEPSEEK_API_KEY=your-api-key
+# or
+OPENAI_API_KEY=your-api-key
+
 ```
 
 ### 4. Seed the Database

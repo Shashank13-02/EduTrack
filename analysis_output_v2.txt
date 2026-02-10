@@ -1,0 +1,30 @@
+﻿[dotenv@17.2.3] injecting env (2) from .env.local -- tip: ≡ƒæÑ sync secrets across teammates & machines: https://dotenvx.com/ops
+≡ƒöì Connecting to Database...
+ΓÜá∩╕Å No MONGODB_URI provided. Starting In-Memory MongoDB...
+Γ£à In-Memory MongoDB started at mongodb://127.0.0.1:51874/
+Γ£à MongoDB connected successfully
+
+≡ƒÅ½ Generatng Class Performance Report...
+ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü
+Found 3 students.
+
+≡ƒôè CLASS SUMMARY
+   Average Score:      0.0%
+   Average Attendance: 0.0%
+   Students At Risk:   3 / 3
+
+≡ƒÜ¿ STUDENTS REQUIRING IMMEDIATE ATTENTION
+   - Vihaan Rao (core1@student.com)
+     Attendance: 0.0% | Score: 0.0%
+   - Priya Sharma (core2@student.com)
+     Attendance: 0.0% | Score: 0.0%
+   - Arjun Singh (noncore@student.com)
+     Attendance: 0.0% | Score: 0.0%
+
+≡ƒñû AI Recommended Intervention for Vihaan Rao:
+   "Personalized Learning Analysis for Vihaan Rao..."
+   Plan: Day 1 (Monday): Focus on Core Concepts - watch tutorials and take notes
+   Plan: 
+ΓÜá∩╕Å HIGH PRIORITY: Schedule daily study sessions of at least 2 hours
+
+ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü
