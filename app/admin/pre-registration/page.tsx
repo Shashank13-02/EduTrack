@@ -269,7 +269,7 @@ export default function AdminPreRegistrationPage() {
     });
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-4 md:p-8">
+        <div className="min-h-screen bg-background dark:bg-slate-950 p-4 md:p-8">
             <div className="max-w-7xl mx-auto space-y-8">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -461,7 +461,7 @@ export default function AdminPreRegistrationPage() {
                                     placeholder="Search by name or email..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-12 pr-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 focus:border-blue-500 focus:outline-none transition-all"
+                                    className="w-full pl-12 pr-4 py-3 rounded-2xl bg-background dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 focus:border-blue-500 focus:outline-none transition-all"
                                 />
                             </div>
                             <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1">
@@ -496,7 +496,7 @@ export default function AdminPreRegistrationPage() {
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-left border-collapse">
                                         <thead>
-                                            <tr className="border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50">
+                                            <tr className="border-b border-slate-100 dark:border-slate-800 bg-background/50 dark:bg-slate-800/50">
                                                 <th className="px-6 py-4 text-xs uppercase font-black tracking-widest text-slate-400">Identity</th>
                                                 <th className="px-6 py-4 text-xs uppercase font-black tracking-widest text-slate-400">Department</th>
                                                 <th className="px-6 py-4 text-xs uppercase font-black tracking-widest text-slate-400">Specifics</th>
@@ -510,7 +510,7 @@ export default function AdminPreRegistrationPage() {
                                                     key={user._id}
                                                     initial={{ opacity: 0 }}
                                                     animate={{ opacity: 1 }}
-                                                    className="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors"
+                                                    className="hover:bg-background dark:hover:bg-slate-800/30 transition-colors"
                                                 >
                                                     <td className="px-6 py-4">
                                                         <div className="flex flex-col">
@@ -670,7 +670,7 @@ export default function AdminPreRegistrationPage() {
                                     {/* Upload Results */}
                                     {uploadResult && (
                                         <div className="space-y-4">
-                                            <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl">
+                                            <div className="p-4 bg-background dark:bg-slate-800 rounded-2xl">
                                                 <h3 className="font-bold text-slate-900 dark:text-white mb-3">Upload Results</h3>
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div className="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-700">

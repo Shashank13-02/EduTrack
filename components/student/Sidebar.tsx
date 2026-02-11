@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const menuItems = [
     { title: 'Dashboard', icon: LayoutDashboard, href: '/student/dashboard' },
@@ -91,7 +92,7 @@ export function StudentSidebar() {
             initial={false}
             animate={{ width: isCollapsed ? 80 : 280 }}
             className={cn(
-                "relative bg-gradient-to-b from-white via-white to-blue-50/30",
+                "relative bg-white",
                 "dark:from-slate-900 dark:via-slate-900 dark:to-slate-800",
                 "border-r border-gray-200 dark:border-slate-700 z-50 flex flex-col",
                 "shadow-[0_0_30px_rgba(59,130,246,0.1)] dark:shadow-[0_0_30px_rgba(99,102,241,0.15)]",
@@ -167,6 +168,10 @@ export function StudentSidebar() {
 
             {/* Bottom Actions */}
             <div className="p-4 border-t border-gray-200 dark:border-slate-700 space-y-2">
+                <div className={cn("flex justify-center", isCollapsed ? "" : "w-full")}>
+                    <ThemeToggle />
+                </div>
+
                 {/* Logout Button */}
                 <motion.button
                     onClick={handleLogout}

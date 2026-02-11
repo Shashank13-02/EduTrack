@@ -50,8 +50,10 @@ export function ParticleBackground() {
 
             // Theme-based colors
             const isDark = resolvedTheme === 'dark';
-            const particleColor = isDark ? '147, 197, 253' : '59, 130, 246'; // blue-300 / blue-600
-            const lineColor = isDark ? '167, 139, 250' : '139, 92, 246'; // purple-400 / purple-600
+            // Light mode: Slate-200 / Slate-300 (very subtle)
+            // Dark mode: Blue-300 / Purple-400
+            const particleColor = isDark ? '147, 197, 253' : '203, 213, 225';
+            const lineColor = isDark ? '167, 139, 250' : '226, 232, 240';
 
             particlesRef.current.forEach((particle, i) => {
                 // Update position

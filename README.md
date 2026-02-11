@@ -4,6 +4,15 @@ EduTrack is an advanced, AI-driven educational analytics platform designed to tr
 
 ![EduTrack Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop)
 
+<div align="center">
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShashank13-02%2FEduTrack)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://edutrack-demo.vercel.app)
+
+[View Live Demo](https://edutrack-demo.vercel.app) • [Report Bug](https://github.com/Shashank13-02/EduTrack/issues) • [Request Feature](https://github.com/Shashank13-02/EduTrack/issues)
+
+</div>
+
 ## 🚀 Features
 
 ### For Teachers & Administrators

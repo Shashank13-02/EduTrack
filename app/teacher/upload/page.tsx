@@ -167,7 +167,7 @@ export default function UploadPDFPage() {
                                 htmlFor="pdf-upload"
                                 className="text-center cursor-pointer group w-full h-full flex flex-col items-center justify-center space-y-4"
                             >
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center group-hover:scale-105 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-950/30 transition-all duration-300 shadow-md">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-muted dark:bg-slate-800 rounded-2xl flex items-center justify-center group-hover:scale-105 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-950/30 transition-all duration-300 shadow-md">
                                     <Upload className="text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 w-8 h-8 sm:w-10 sm:h-10" />
                                 </div>
                                 <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">

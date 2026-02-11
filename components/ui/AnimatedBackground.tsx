@@ -18,13 +18,13 @@ export const AnimatedBackground = () => {
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth="0.5"
-                                className="text-blue-200/20 dark:text-blue-500/10"
+                                className="text-slate-100 dark:text-blue-500/10"
                             />
                         </pattern>
                         <linearGradient id="grid-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="rgba(59, 130, 246, 0.1)" />
-                            <stop offset="50%" stopColor="rgba(147, 51, 234, 0.1)" />
-                            <stop offset="100%" stopColor="rgba(236, 72, 153, 0.1)" />
+                            <stop offset="0%" stopColor="rgba(255, 255, 255, 0)" />
+                            <stop offset="50%" stopColor="rgba(255, 255, 255, 0)" />
+                            <stop offset="100%" stopColor="rgba(255, 255, 255, 0)" />
                         </linearGradient>
                     </defs>
                     <rect width="100%" height="100%" fill="url(#grid-pattern)" />

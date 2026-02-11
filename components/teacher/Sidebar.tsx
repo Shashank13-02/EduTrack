@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 interface NavItem {
     title: string;
@@ -78,7 +79,7 @@ export function TeacherSidebar({ isCollapsed, onToggle }: TeacherSidebarProps) {
             animate={{ width: isCollapsed ? '80px' : '280px' }}
             className={cn(
                 "fixed left-0 top-0 h-screen z-50 flex flex-col transition-all duration-300",
-                "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200 dark:border-slate-800 shadow-2xl"
+                "bg-white dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200 dark:border-slate-800 shadow-2xl"
             )}
         >
             {/* Logo Section */}
@@ -169,6 +170,9 @@ export function TeacherSidebar({ isCollapsed, onToggle }: TeacherSidebarProps) {
 
             {/* Footer Controls */}
             <div className="p-4 space-y-3">
+                <div className={cn("flex justify-center", isCollapsed ? "" : "w-full")}>
+                    <ThemeToggle />
+                </div>
                 <Button
                     variant="ghost"
                     onClick={() => onToggle(!isCollapsed)}

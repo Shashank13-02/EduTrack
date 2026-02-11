@@ -70,7 +70,7 @@ function LoginContent() {
     };
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-slate-800 dark:via-slate-800 dark:to-slate-800 transition-colors duration-500 overflow-hidden">
+        <div className="relative min-h-screen bg-background dark:bg-gradient-to-br dark:from-slate-800 dark:via-slate-800 dark:to-slate-800 transition-colors duration-500 overflow-hidden">
             <FloatingOrbs />
             <ParticleBackground />
 
@@ -179,7 +179,7 @@ function LoginContent() {
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         required
-                                        className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-700/50 border-2 border-slate-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-4 focus:ring-blue-300/20 dark:focus:ring-blue-500/20 transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                                        className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-background/50 dark:bg-slate-700/50 border-2 border-slate-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-4 focus:ring-blue-300/20 dark:focus:ring-blue-500/20 transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
                                     />
                                 </div>
                             </div>
@@ -196,7 +196,7 @@ function LoginContent() {
                                         value={formData.password}
                                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                         required
-                                        className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-700/50 border-2 border-slate-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-4 focus:ring-blue-300/20 dark:focus:ring-blue-500/20 transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                                        className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-background/50 dark:bg-slate-700/50 border-2 border-slate-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-4 focus:ring-blue-300/20 dark:focus:ring-blue-500/20 transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
                                     />
                                 </div>
                             </div>
@@ -223,7 +223,7 @@ function LoginContent() {
                             </Link>
                         </p>
 
-                        <div className="mt-8 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+                        <div className="mt-8 p-4 rounded-xl bg-background/50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
                             <p className="text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Demo Credentials:</p>
                             <p className="text-xs text-slate-600 dark:text-slate-300">Teacher: teacher@edu.com / teacher123</p>
                             <p className="text-xs text-slate-600 dark:text-slate-300">Student: core1@student.com / student123</p>

@@ -331,7 +331,7 @@ export default function RegisterPage() {
                                                         value={formData.email}
                                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                         required
-                                                        className="pl-12 py-3.5 rounded-xl border-2 bg-slate-50/50 dark:bg-slate-800/50"
+                                                        className="pl-12 py-3.5 rounded-xl border-2 bg-background/50 dark:bg-slate-800/50"
                                                     />
                                                 </div>
                                             </div>
@@ -348,7 +348,7 @@ export default function RegisterPage() {
                                                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                                         required
                                                         minLength={6}
-                                                        className="pl-12 py-3.5 rounded-xl border-2 bg-slate-50/50 dark:bg-slate-800/50"
+                                                        className="pl-12 py-3.5 rounded-xl border-2 bg-background/50 dark:bg-slate-800/50"
                                                     />
                                                 </div>
                                             </div>
@@ -440,7 +440,7 @@ export default function RegisterPage() {
                                         exit={{ opacity: 0, x: -20 }}
                                         className="space-y-6"
                                     >
-                                        <div className="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border-2 border-dashed border-slate-200 dark:border-slate-700 space-y-4">
+                                        <div className="p-6 bg-background dark:bg-slate-800/50 rounded-2xl border-2 border-dashed border-slate-200 dark:border-slate-700 space-y-4">
                                             <h3 className="font-bold text-slate-900 dark:text-white flex items-center gap-2">
                                                 <ShieldCheck className="text-emerald-500 w-5 h-5" />
                                                 University Record Found

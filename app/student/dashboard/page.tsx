@@ -422,7 +422,7 @@ export default function StudentDashboard() {
             {/* Footer */}
             <footer className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:bg-slate-900 border-t border-blue-200 dark:border-slate-800 text-indigo-700 dark:text-slate-200 py-8 mt-12 shadow-inner">
                 <div className="container mx-auto px-4 text-center">
-                    <p className="text-sm dark:text-black">
+                    <p className="text-sm dark:text-slate-400">
                         © 2026 EduTrack - Personalized Student Performance Tracking System
                     </p>
                     <p className="text-xs text-indigo-600 dark:text-slate-400 mt-2">

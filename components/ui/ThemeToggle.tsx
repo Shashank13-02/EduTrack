@@ -28,13 +28,13 @@ export function ThemeToggle() {
     return (
         <motion.button
             onClick={toggleTheme}
-            className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group overflow-hidden"
+            className="relative w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center group overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Toggle theme"
         >
             <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             />
 
             <div className="relative z-10">
@@ -46,7 +46,7 @@ export function ThemeToggle() {
                         exit={{ rotate: 90, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <MdDarkMode className="w-6 h-6 text-slate-700" />
+                        <MdDarkMode className="w-5 h-5 text-slate-700" />
                     </motion.div>
                 ) : (
                     <motion.div
@@ -56,16 +56,10 @@ export function ThemeToggle() {
                         exit={{ rotate: -90, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <MdLightMode className="w-6 h-6 text-yellow-400" />
+                        <MdLightMode className="w-5 h-5 text-yellow-400" />
                     </motion.div>
                 )}
             </div>
-
-            {/* Glow effect */}
-            <motion.div
-                className="absolute inset-0 rounded-2xl blur-md bg-gradient-to-br from-blue-400 to-purple-600 opacity-0 group-hover:opacity-50 transition-opacity duration-300"
-                style={{ zIndex: -1 }}
-            />
         </motion.button>
     );
 }

@@ -93,7 +93,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-500 overflow-x-hidden">
+    <div className="relative min-h-screen bg-background dark:bg-gradient-to-br dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-500 overflow-x-hidden">
       <AnimatedBackground />
       <FloatingOrbs />
       <ParticleBackground />
@@ -198,151 +198,151 @@ export default function LandingPage() {
             <div className="absolute -inset-8 bg-gradient-to-tr from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-3xl -z-10 rounded-3xl" />
 
             {/* Main showcase container with glassmorphism */}
-           <div className="relative">
-  {/* Floating Feature Cards */}
-  <div className="grid md:grid-cols-3 gap-6 px-4">
+            <div className="relative">
+              {/* Floating Feature Cards */}
+              <div className="grid md:grid-cols-3 gap-6 px-4">
 
-    {/* CARD 1 — Blue */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6 }}
-      whileHover={{ y: -10, scale: 1.02 }}
-      className="md:translate-y-8"
-    >
-      <GlassCard
-        className="
+                {/* CARD 1 — Blue */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="md:translate-y-8"
+                >
+                  <GlassCard
+                    className="
           relative p-8 group cursor-pointer
           bg-white/90 dark:bg-slate-900/80
           border border-blue-200/60 dark:border-blue-500/30
           shadow-xl shadow-blue-500/10
           backdrop-blur-xl
         "
-      >
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-blue-500/60 to-transparent" />
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-blue-500/60 to-transparent" />
 
-        <div className="relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/40">
-            <BarChart3 className="w-7 h-7 text-white" />
-          </div>
+                    <div className="relative z-10">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/40">
+                        <BarChart3 className="w-7 h-7 text-white" />
+                      </div>
 
-          <h3 className="text-xl font-extrabold mb-2 text-slate-900 dark:text-slate-100">
-            Real-Time Analytics
-          </h3>
+                      <h3 className="text-xl font-extrabold mb-2 text-slate-900 dark:text-slate-100">
+                        Real-Time Analytics
+                      </h3>
 
-          <p className="text-slate-700 dark:text-slate-300 text-sm">
-            Track performance with live dashboards and insights
-          </p>
+                      <p className="text-slate-700 dark:text-slate-300 text-sm">
+                        Track performance with live dashboards and insights
+                      </p>
 
-          <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-700/50">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-600 dark:text-slate-400">Accuracy</span>
-              <span className="font-bold text-blue-600 dark:text-blue-400">98%</span>
-            </div>
-          </div>
-        </div>
-      </GlassCard>
-    </motion.div>
+                      <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-700/50">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-slate-600 dark:text-slate-400">Accuracy</span>
+                          <span className="font-bold text-blue-600 dark:text-blue-400">98%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </GlassCard>
+                </motion.div>
 
-    {/* CARD 2 — Purple */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.7 }}
-      whileHover={{ y: -10, scale: 1.02 }}
-    >
-      <GlassCard
-        className="
+                {/* CARD 2 — Purple */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <GlassCard
+                    className="
           relative p-8 group cursor-pointer
           bg-white/90 dark:bg-slate-900/80
           border border-purple-200/60 dark:border-purple-500/30
           shadow-xl shadow-purple-500/10
           backdrop-blur-xl
         "
-      >
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-purple-500/60 to-transparent" />
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-purple-500/60 to-transparent" />
 
-        <div className="relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 shadow-lg shadow-purple-500/40">
-            <Brain className="w-7 h-7 text-white" />
-          </div>
+                    <div className="relative z-10">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 shadow-lg shadow-purple-500/40">
+                        <Brain className="w-7 h-7 text-white" />
+                      </div>
 
-          <h3 className="text-xl font-extrabold mb-2 text-slate-900 dark:text-slate-100">
-            AI-Powered Insights
-          </h3>
+                      <h3 className="text-xl font-extrabold mb-2 text-slate-900 dark:text-slate-100">
+                        AI-Powered Insights
+                      </h3>
 
-          <p className="text-slate-700 dark:text-slate-300 text-sm">
-            Personalized learning paths generated by AI
-          </p>
+                      <p className="text-slate-700 dark:text-slate-300 text-sm">
+                        Personalized learning paths generated by AI
+                      </p>
 
-          <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-700/50">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-600 dark:text-slate-400">Satisfaction</span>
-              <span className="font-bold text-purple-600 dark:text-purple-400">95%</span>
-            </div>
-          </div>
-        </div>
-      </GlassCard>
-    </motion.div>
+                      <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-700/50">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-slate-600 dark:text-slate-400">Satisfaction</span>
+                          <span className="font-bold text-purple-600 dark:text-purple-400">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </GlassCard>
+                </motion.div>
 
-    {/* CARD 3 — Emerald */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8 }}
-      whileHover={{ y: -10, scale: 1.02 }}
-      className="md:translate-y-8"
-    >
-      <GlassCard
-        className="
+                {/* CARD 3 — Emerald */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="md:translate-y-8"
+                >
+                  <GlassCard
+                    className="
           relative p-8 group cursor-pointer
           bg-white/90 dark:bg-slate-900/80
           border border-emerald-200/60 dark:border-emerald-500/30
           shadow-xl shadow-emerald-500/10
           backdrop-blur-xl
         "
-      >
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
 
-        <div className="relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/40">
-            <Sparkles className="w-7 h-7 text-white" />
-          </div>
+                    <div className="relative z-10">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/40">
+                        <Sparkles className="w-7 h-7 text-white" />
+                      </div>
 
-          <h3 className="text-xl font-extrabold mb-2 text-slate-900 dark:text-slate-100">
-            Smart Predictions
-          </h3>
+                      <h3 className="text-xl font-extrabold mb-2 text-slate-900 dark:text-slate-100">
+                        Smart Predictions
+                      </h3>
 
-          <p className="text-slate-700 dark:text-slate-300 text-sm">
-            Early intervention with risk prediction models
-          </p>
+                      <p className="text-slate-700 dark:text-slate-300 text-sm">
+                        Early intervention with risk prediction models
+                      </p>
 
-          <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-700/50">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-600 dark:text-slate-400">Precision</span>
-              <span className="font-bold text-emerald-600 dark:text-emerald-400">92%</span>
+                      <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-700/50">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-slate-600 dark:text-slate-400">Precision</span>
+                          <span className="font-bold text-emerald-600 dark:text-emerald-400">92%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </GlassCard>
+                </motion.div>
+              </div>
+
+              {/* Central Achievement Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9, type: "spring" }}
+                className="absolute -bottom-8 left-1/2 -translate-x-1/2 z-20"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 blur-2xl opacity-60 rounded-full" />
+                  <div className="relative w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-2xl border-4 border-white dark:border-slate-900">
+                    <Award className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+              </motion.div>
             </div>
-          </div>
-        </div>
-      </GlassCard>
-    </motion.div>
-  </div>
-
-  {/* Central Achievement Badge */}
-  <motion.div
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ delay: 0.9, type: "spring" }}
-    className="absolute -bottom-8 left-1/2 -translate-x-1/2 z-20"
-  >
-    <div className="relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 blur-2xl opacity-60 rounded-full" />
-      <div className="relative w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-2xl border-4 border-white dark:border-slate-900">
-        <Award className="w-12 h-12 text-white" />
-      </div>
-    </div>
-  </motion.div>
-</div>
 
           </motion.div>
         </section>
@@ -376,10 +376,10 @@ export default function LandingPage() {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {features.map((feature, i) => (
-             <MagicCard
-  key={i}
-  gradient
-  className="
+              <MagicCard
+                key={i}
+                gradient
+                className="
     h-full rounded-[2rem] overflow-hidden
     bg-white/95           /* 🔥 STRONGER light bg */
     dark:bg-slate-900/50
@@ -389,13 +389,13 @@ export default function LandingPage() {
     shadow-xl shadow-slate-300/40 /* 🔥 visible light shadow */
     dark:shadow-slate-950/30
   "
->
-  {/* IMPORTANT: z-10 so content stays above gradient */}
-  <div className="relative z-10 p-8 md:p-10 flex flex-col h-full">
+              >
+                {/* IMPORTANT: z-10 so content stays above gradient */}
+                <div className="relative z-10 p-8 md:p-10 flex flex-col h-full">
 
-    {/* Icon */}
-    <div
-      className={`
+                  {/* Icon */}
+                  <div
+                    className={`
         w-14 h-14 rounded-2xl
         ${feature.bg}
         flex items-center justify-center mb-8
@@ -403,48 +403,48 @@ export default function LandingPage() {
         relative overflow-hidden
         group-hover:scale-110 transition-transform duration-300
       `}
-    >
-      <div
-        className={`
+                  >
+                    <div
+                      className={`
           absolute inset-0
           ${feature.bg}
           blur-xl opacity-0
           group-hover:opacity-60 transition-opacity duration-500
         `}
-      />
-      <feature.icon className={`w-7 h-7 ${feature.color} relative z-10`} />
-    </div>
+                    />
+                    <feature.icon className={`w-7 h-7 ${feature.color} relative z-10`} />
+                  </div>
 
-    {/* Title */}
-    <h3 className="
+                  {/* Title */}
+                  <h3 className="
       text-2xl font-extrabold mb-4
       text-slate-900        /* 🔥 darker title in light */
       dark:text-slate-50
     ">
-      {feature.title}
-    </h3>
+                    {feature.title}
+                  </h3>
 
-    {/* Description */}
-    <p className="
+                  {/* Description */}
+                  <p className="
       text-slate-800        /* 🔥 stronger body text */
       dark:text-slate-300
       leading-relaxed mb-8 flex-grow
     ">
-      {feature.desc}
-    </p>
+                    {feature.desc}
+                  </p>
 
-    {/* Learn more */}
-    <div className="
+                  {/* Learn more */}
+                  <div className="
       mt-auto flex items-center text-sm font-bold
       text-blue-800         /* 🔥 clearer CTA in light */
       dark:text-blue-400
       group/link cursor-pointer
     ">
-      Learn more
-      <ChevronRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
-    </div>
-  </div>
-</MagicCard>
+                    Learn more
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </MagicCard>
 
             ))}
           </motion.div>

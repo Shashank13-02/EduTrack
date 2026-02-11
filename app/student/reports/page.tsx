@@ -258,7 +258,7 @@ export default function StudentReportsPage() {
                                                     <Info className="w-5 h-5 text-blue-500" />
                                                     Overall Assessment
                                                 </h4>
-                                                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 italic text-muted-foreground leading-relaxed">
+                                                <div className="p-4 rounded-xl bg-background dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 italic text-muted-foreground leading-relaxed">
                                                     <FormattedText text={selectedReport.reportData.overallAssessment} />
                                                 </div>
                                             </div>
