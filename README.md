@@ -75,7 +75,7 @@ npm run seed
 ```bash
 npm run dev
 ```
-Visit [http://localhost:3000](http://localhost:3000) (or the port shown in your terminal, e.g., http://localhost:3001) to see the app in action.
+Visit [http://localhost:3000](http://localhost:3002) to see the app in action.
 
 ## 🔑 Demo Credentials
 
@@ -96,7 +96,7 @@ This project is optimized for deployment on **Vercel**.
 3.  Import the `EduTrack` repository.
 4.  In the **Environment Variables** section, add:
     -   `MONGODB_URI`: Your MongoDB Atlas connection string.
-    -   `JWT_SECRET`: A random strong string.
+    -   `JWT_SECRET`: A random, strong string.
 5.  Click **Deploy**.
 
 **Note:** For the database, it is highly recommended to use **MongoDB Atlas** (Cloud) instead of the in-memory database for deployed versions.
