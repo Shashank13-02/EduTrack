@@ -53,7 +53,7 @@ The project comes with a default configuration that works out-of-the-box using a
 For production/persistence, create a `.env.local` file:
 
 ```env
-MOGNODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/edutrack
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/edutrack
 JWT_SECRET=your-secure-secret-key
 NEXT_PUBLIC_BASE_URL=https://your-domain.com
 

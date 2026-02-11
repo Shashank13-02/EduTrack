@@ -6,6 +6,7 @@ import { Document } from '@langchain/core/documents';
 import CollegeKnowledge from '../models/CollegeKnowledge';
 import { getPineconeIndex, ensureIndexExists } from '../lib/pinecone';
 import { TaskType } from "@google/generative-ai";
+import { OpenAIEmbeddings } from '@langchain/openai';
 
 dotenv.config();
 
