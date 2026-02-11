@@ -75,7 +75,7 @@ npm run seed
 ```bash
 npm run dev
 ```
-Visit [http://localhost:3000](http://localhost:3002) to see the app in action.
+Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
 ## 🔑 Demo Credentials
 
@@ -90,6 +90,8 @@ Password: `student123`
 ## ☁️ Deployment Guide
 
 This project is optimized for deployment on **Vercel**.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShashank13-02%2FEduTrack)
 
 1.  Push your code to your GitHub repository (`https://github.com/Shashank13-02/EduTrack`).
 2.  Go to [Vercel](https://vercel.com) and "Add New Project".
