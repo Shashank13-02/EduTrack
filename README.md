@@ -4,14 +4,7 @@ EduTrack is an advanced, AI-driven educational analytics platform designed to tr
 
 ![EduTrack Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop)
 
-<div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShashank13-02%2FEduTrack)
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://edutrack-demo.vercel.app)
-
-[View Live Demo](https://edutrack-demo.vercel.app) • [Report Bug](https://github.com/Shashank13-02/EduTrack/issues) • [Request Feature](https://github.com/Shashank13-02/EduTrack/issues)
-
-</div>
 
 ## 🚀 Features
 
@@ -38,87 +31,14 @@ EduTrack is an advanced, AI-driven educational analytics platform designed to tr
 - **AI/ML**: Custom prediction logic & template-based generative AI for study plans.
 - **Visualization**: [Recharts](https://recharts.org/) for interactive data plotting.
 
-## 🏁 Getting Started (End-to-End)
 
-Follow these steps to run the project locally or deploy it to the cloud.
-
-### Prerequisites
-- Node.js 18+ installed.
-- (Optional) A MongoDB Atlas account for production data.
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Shashank13-02/EduTrack.git
-cd EduTrack
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Setup Environment
-The project comes with a default configuration that works out-of-the-box using an in-memory database. 
-For production/persistence, create a `.env.local` file:
-
-```env
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/edutrack
-JWT_SECRET=your-secure-secret-key
-NEXT_PUBLIC_BASE_URL=https://your-domain.com
-
-# AI Configuration (DeepSeek / OpenRouter)
-DEEPSEEK_API_KEY=your-api-key
-# or
-OPENAI_API_KEY=your-api-key
-
-```
-
-### 4. Seed the Database
-Populate the app with comprehensive demo data (Teachers, Students, Marks, Attendance):
-
-```bash
-npm run seed
-```
-
-### 5. Run the Application
-```bash
-npm run dev
-```
-Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
-
-## 🔑 Demo Credentials
-
-**Teacher Portal**  
-Email: `teacher@edu.com`  
-Password: `teacher123`
-
-**Student Portal**  
-Email: `core1@student.com`  
-Password: `student123`
-
-## ☁️ Deployment Guide
-
-This project is optimized for deployment on **Vercel**.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShashank13-02%2FEduTrack)
-
-1.  Push your code to your GitHub repository (`https://github.com/Shashank13-02/EduTrack`).
-2.  Go to [Vercel](https://vercel.com) and "Add New Project".
-3.  Import the `EduTrack` repository.
-4.  In the **Environment Variables** section, add:
-    -   `MONGODB_URI`: Your MongoDB Atlas connection string.
-    -   `JWT_SECRET`: A random, strong string.
-5.  Click **Deploy**.
-
-**Note:** For the database, it is highly recommended to use **MongoDB Atlas** (Cloud) instead of the in-memory database for deployed versions.
 
 ## 🛡️ Security
 - **RBAC**: Strict Role-Based Access Control ensures students cannot access teacher/admin routes.
 - **Data Protection**: Passwords are hashed using `bcrypt`.
 - **Session Management**: Secure, HTTP-only cookies prevent XSS attacks.
 
-## 📄 License
-This project is licensed under the MIT License.
+
 
 ---
-**Created by Shashank13-02**
+**Created by Shashank13-02 (Team - Civicnova)**
